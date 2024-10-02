@@ -1,0 +1,56 @@
+/* public/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#facility-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.facility-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.facility-card button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.facility-card button:hover {
+    background-color: #218838;
+}
+
+#facility-details {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#facility-details img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.copyright{
+    text-align: right;
+    font-style: italic;
+}

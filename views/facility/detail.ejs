@@ -1,0 +1,62 @@
+
+<div id="facility-details">
+    <div class="container"></div>
+    <div class="row justify-content-center">
+            <div class="col-md-10 mb-10">
+                <div class="card">
+
+    <div class="row d-flex justify-content-center">
+    
+        <img src="/uploads/<%=facility.image%>" alt="facility Image" class="img-fluid  mb-3 " style=" width: 400px; height: 200px; object-fit: cover;" >
+    
+      </div>
+    
+            <h2><%= facility.name %></h2>
+            <p><strong>Description:</strong> <%= facility.description %>
+                <strong>Location:</strong> <%= facility.location %>
+                <strong>Price:</strong> <%= facility.price %> BD
+                <strong>Phone Number:</strong> +973 <%= facility.phoneNumber %> 
+            </p>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <h3>Comments</h3>
+        <% comments.forEach(comment => { %>
+            <div class="comment">
+                <p><strong><%= comment.userId.name %>:</strong> <%= comment.comment %> |
+                <em>Rated: <%= comment.rate %></em>
+                <% if (user) { %>
+                   
+                   
+                    <form method="POST" action="/comment/delete/<%= comment._id %>" style="display:inline;">
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this comment?');">Delete</button>
+                    </form>
+                <% } %>
+            </p>
+            </div>
+        <% }); %>
+ 
+<% if (user) { %> <!-- Check if user is signed in -->
+    <form method="POST" action="/comment/add">
+        <input type="hidden" name="facilityId" value="<%= facility._id %>">
+        <div>
+            <label>Comment:</label>
+            <input type="text" name="comment" class="form-control" required>
+        </div>
+        <div>
+            <label>Rate:</label>
+            <input type="number" name="rate" class="form-control" min="1" max="5" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Comment</button>
+    </form>
+
+<% } else { %>
+    <p>Please <a href="/auth/google">sign in</a> to leave a comment or edit this facility.</p>
+<% } %>
+
+<button onclick="window.location.href='/facility/type/<%= facility.type %>'" class="btn btn-primary">Back</button> <!-- Navigate back to listing -->

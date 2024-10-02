@@ -1,0 +1,23 @@
+<h1> <%= welcomeMessage %> </h1>
+
+
+<div class="facility-list">
+    
+    <% if (user) { %>
+        <a href="/facility/add" class="btn btn-outline-primary">Add Facility</a>
+    <% } %>
+
+    <div class="facility-card">
+        <h2>Camps</h2>
+        <p>Explore bahrain camps</p>
+        <button onclick="window.location.href='/facility/type/camp'">View Camps</button>
+    </div>
+    
+    <div class="facility-card">
+        <h2>Pools</h2>
+        <p>Discover pools</p>
+        <button onclick="window.location.href='/facility/type/pool'">View Pools</button>
+    </div>
+    
+  
+</div>
