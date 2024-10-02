@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#facility-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.facility-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.facility-card button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.facility-card button:hover {
+    background-color: #218838;
+}
+
+#facility-details {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#facility-details img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.copyright {
+    text-align: right;
+    font-style: italic;
+}
+
+/* Styles for login and signup forms */
+.auth-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.auth-container button:hover {
+    background-color: #0056b3;
+}
+
+.auth-container .auth-footer {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.auth-container .auth-footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.auth-container .auth-footer a:hover {
+    text-decoration: underline;
+}
