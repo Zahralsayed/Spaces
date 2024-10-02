@@ -1,0 +1,15 @@
+<!-- <h1><%= facilities.type %></h1> -->
+<h1>Facilities</h1>
+
+<div id="facility-list">
+    <% facilities.forEach(facility => { %>
+        <div class="facility-card">
+            <h2><%= facility.name %></h2>
+            <p><%= facility.description %></p>
+            <button onclick="window.location.href='/facility/detail?id=<%= facility._id %>'">View Details</button>
+        </div>
+    <% }); %>
+</div>
+
+<button onclick="window.history.back()" class="btn btn-primary">Back</button> <!-- Navigate back to listing -->
+

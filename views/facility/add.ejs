@@ -1,0 +1,50 @@
+<h1> Add facility</h1>
+
+<form  method="POST" action="/facility/add" enctype="multipart/form-data">
+    <div>
+        <label> Name: </label>
+        <input type="text" name="name" id="name" class="form-control" required>
+    </div>
+
+    <div>
+        <label> Description: </label>
+        <input type="text" name="description" id="description" class="form-control" required>
+    </div>
+
+    <div>
+        <label> location: </label>
+        <input type="text" name="location" id="location" class="form-control" required>
+    </div>
+
+    <div>
+        <label> Price: </label>
+        <input type="number" name="price" id="price" class="form-control" required>
+    </div>
+
+    <div>
+        <label> Phone Number: </label>
+        <input type="number" name="phoneNumber" id="phoneNumber" class="form-control" required>
+    </div>
+
+    <div>
+        <label> Type: </label>
+        <select id="type" name="type" class="form-control">
+            <option value="camp">Camp</option>
+            <option value="pool">Pool</option>
+          </select>    
+    </div>
+
+  
+    <div class="col">
+        <div>
+          <!-- accept="image/*" > make sure that file type is an image -->
+          <label>Image</label>
+          <input type="file" name="image" class="form-control" accept="image/*" required> 
+        </div>
+      </div>
+
+    <br>
+
+    <button type="submit" class="btn btn-primary"> Create facility </button>
+</form>
+<button onclick="window.location.href='/'" class="btn btn-primary">Back</button>
